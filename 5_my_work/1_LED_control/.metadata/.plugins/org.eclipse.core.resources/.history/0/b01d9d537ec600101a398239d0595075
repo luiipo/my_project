@@ -1,0 +1,15 @@
+// 전처리 함수
+#include "xparameters.h"
+#include <xgpio.h>
+#include <stdio.h>
+#include <sleep.h>
+
+// 임베디드는 리턴을 사용하지 않음
+int main(void)
+{
+	while(1)
+	{
+		xil_printf("Hello World!\r\n");
+		sleep(2);
+	}
+}
