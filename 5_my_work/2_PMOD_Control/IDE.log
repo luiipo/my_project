@@ -1,0 +1,59 @@
+11:20:31 DEBUG : Logs will be stored at 'C:/repo/my_project/5_my_work/2_PMOD_Control/IDE.log'.
+11:20:37 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\repo\my_project\5_my_work\2_PMOD_Control\temp_xsdb_launch_script.tcl
+11:20:37 INFO  : Platform repository initialization has completed.
+11:20:37 INFO  : Registering command handlers for Vitis TCF services
+11:20:39 INFO  : XSCT server has started successfully.
+11:20:39 INFO  : Successfully done setting XSCT server connection channel  
+11:20:39 INFO  : plnx-install-location is set to ''
+11:20:39 INFO  : Successfully done query RDI_DATADIR 
+11:20:39 INFO  : Successfully done setting workspace for the tool. 
+11:23:03 INFO  : Platform 'soc_pmod' is added to custom repositories.
+11:23:05 INFO  : [Import] Updating active build configuration of the system project 'pmod_control_system' to 'Debug' after the import.
+11:24:04 INFO  : Result from executing command 'getProjects': soc_pmod
+11:24:04 INFO  : Result from executing command 'getPlatforms': soc_pmod|C:/repo/my_project/5_my_work/2_PMOD_Control/soc_pmod/export/soc_pmod/soc_pmod.xpfm
+11:24:04 INFO  : Checking for BSP changes to sync application flags for project 'pmod_control'...
+11:25:26 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:25:29 INFO  : Jtag cable 'Digilent Zybo Z7 210351BD24D5A' is selected.
+11:25:29 INFO  : 'jtag frequency' command is executed.
+11:25:30 INFO  : Context for 'APU' is selected.
+11:25:30 INFO  : System reset is completed.
+11:25:33 INFO  : 'after 3000' command is executed.
+11:25:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351BD24D5A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351BD24D5A-23727093-0"}' command is executed.
+11:25:38 INFO  : Device configured successfully with "C:/repo/my_project/5_my_work/2_PMOD_Control/pmod_control/_ide/bitstream/system_wrapper.bit"
+11:25:38 INFO  : Context for 'APU' is selected.
+11:25:38 INFO  : Hardware design and registers information is loaded from 'C:/repo/my_project/5_my_work/2_PMOD_Control/soc_pmod/export/soc_pmod/hw/system_wrapper.xsa'.
+11:25:38 INFO  : 'configparams force-mem-access 1' command is executed.
+11:25:38 INFO  : Context for 'APU' is selected.
+11:25:38 INFO  : Sourcing of 'C:/repo/my_project/5_my_work/2_PMOD_Control/pmod_control/_ide/psinit/ps7_init.tcl' is done.
+11:25:38 INFO  : 'ps7_init' command is executed.
+11:25:38 INFO  : 'ps7_post_config' command is executed.
+11:25:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:25:38 INFO  : The application 'C:/repo/my_project/5_my_work/2_PMOD_Control/pmod_control/Debug/pmod_control.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:25:38 INFO  : 'configparams force-mem-access 0' command is executed.
+11:25:38 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351BD24D5A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351BD24D5A-23727093-0"}
+fpga -file C:/repo/my_project/5_my_work/2_PMOD_Control/pmod_control/_ide/bitstream/system_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/repo/my_project/5_my_work/2_PMOD_Control/soc_pmod/export/soc_pmod/hw/system_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/repo/my_project/5_my_work/2_PMOD_Control/pmod_control/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/repo/my_project/5_my_work/2_PMOD_Control/pmod_control/Debug/pmod_control.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:25:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:25:38 INFO  : 'con' command is executed.
+11:25:38 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+11:25:38 INFO  : Launch script is exported to file 'C:\repo\my_project\5_my_work\2_PMOD_Control\pmod_control_system\_ide\scripts\debugger_pmod_control-default.tcl'
