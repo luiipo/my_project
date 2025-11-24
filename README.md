@@ -31,3 +31,12 @@ Git / GitHub 기반 버전관리 및 협업 흐름 체험
 하드웨어 제어 실습: 내부 LED/Switch, PMOD 제어
 문서관리: Notion + Slack 통합워크플로
 팀/개인 프로젝트를 통한 아이디어 구현 및 공유
+
+## 🧰 개발환경 & 도구 목록  
+아래는 본 프로젝트에서 사용하는 주요 툴입니다.  
+- [Visual Studio Code](https://code.visualstudio.com/docs/?dv=win64user) – 확장이 가능한 오픈소스 코드 에디터  
+- [SourceTree](https://product-downloads.atlassian.com/software/sourcetree/windows/ga/SourceTreeSetup-3.4.26.exe) – Git GUI 클라이언트  
+- [Notion](https://www.notion.com/desktop/windows/download?from=marketing&pathname=%2Fdesktop&tid=c9e76650c69f4474985da99843f9b1be) – 노트 및 문서관리 툴  
+- [Slack](https://slack.com/downloads/instructions/windows?ddl=1&build=win64_msix) – 팀 커뮤니케이션 메신저  
+- [Git](https://github.com/git-for-windows/git/releases/download/v2.51.2.windows.1/Git-2.51.2-64-bit.exe) – 버전관리 프로그램  
+- [TeraTerm](https://github.com/TeraTermProject/teraterm/releases/download/v5.5.0/teraterm-5.5.0-x64.exe) – 외부 장비 터미널 연결 프로그램  
