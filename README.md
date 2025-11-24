@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="pic.png" width="100%" alt="GitHub IoT Programming Camp Banner"/>
+</p>
+
 # 🖐️ GitHub 활용 사물인터넷 프로그래밍 캠프 – My Project  
 > 오픈소스 생태계와 IoT 장비를 연결하는 학습 & 실습 프로젝트  
 
